@@ -1,3 +1,9 @@
+"""
+https://www.postgresqltutorial.com/postgresql-python/query/
+https://towardsdatascience.com/python-and-postgresql-how-to-access-a-postgresql-database-like-a-data-scientist-b5a9c5a0ea43
+https://www.postgresqltutorial.com/postgresql-python/query/
+
+"""
 import psycopg2
 
 try:
