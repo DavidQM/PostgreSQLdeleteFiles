@@ -5,6 +5,8 @@ https://www.postgresqltutorial.com/postgresql-python/query/
 
 """
 import psycopg2
+import pandas as pd
+
 
 try:
    connection = psycopg2.connect(user="postgres",
@@ -13,18 +15,18 @@ try:
                                   port="5432",
                                   database="convocatorias")
    cursor = connection.cursor()
-   postgreSQL_select_Query = "select * from sis_estimulos.usuario"
+  #postgreSQL_select_Query = "select * from sis_estimulos.usuario"
+   postgreSQL_select_Query = "select * from sis_estimulos.propuesta"
+   postgreSQL_select_Query = "select * from sis_estimulos.site_convocatoria"
+   #aqui estan los archivos y los nobres
+   postgreSQL_select_Query = "select * from sis_estimulos.propuesta_requisito_arch"
 
    cursor.execute(postgreSQL_select_Query)
-   print("Selecting rows from mobile table using cursor.fetchall")
-   mobile_records = cursor.fetchall() 
+   table = pd.read_sql_query(postgreSQL_select_Query, connection)
    
-   print("Print each row and it's columns values")
-   for row in mobile_records:
-       print(row)
-       #print("Id = ", row[0], )
-       #print("Model = ", row[1])
-       #print("Price  = ", row[2], "\n")
+   propuesta = pd.read_sql_query("select * from sis_estimulos.propuesta", connection)
+   site_convocatoria = pd.read_sql_query("select * from sis_estimulos.site_convocatoria", connection)
+   propuesta_requisito_arch = pd.read_sql_query("select * from sis_estimulos.propuesta_requisito_arch", connection)
 
 except (Exception, psycopg2.Error) as error :
     print ("Error while fetching data from PostgreSQL", error)
