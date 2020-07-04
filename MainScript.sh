@@ -1,13 +1,17 @@
 #!/bin/bash
 #
+User=app_convocatorias
+Passw=Convoc4*Med*
+DataB=convocatorias
+ipAddr=10.2.0.47
 
 # Se genera primer consulta
 #Local
 echo "MainScript"
-User=postgres
-Passw=sapp12345
-DataB=convocatorias
-ipAddr=192.168.1.14
+#User=postgres
+#Passw=sapp12345
+#DataB=convocatorias
+#ipAddr=192.168.1.14
 
 PGPASSWORD=$Passw psql -h $ipAddr -U $User -d $DataB -t -c "select id from sis_estimulos.concurso where agno='2019'" -o convocatoria_id.txt 
 
@@ -41,6 +45,10 @@ while read line; do
   fi
 done < $filename
 
+sleep 2
+python2.7 SearchDelete.py
+
+sleep 2
 echo 'remove residual data'
 #eliminamos todos los files
 rm verificacion_id.txt
@@ -50,6 +58,3 @@ rm propuesta_requisito_id.txt
 rm propuesta_id.txt
 rm estimulo_id.txt
 rm convocatoria_id.txt
-
-
-

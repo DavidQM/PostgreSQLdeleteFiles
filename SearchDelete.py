@@ -1,8 +1,8 @@
 import os
 
 # Path data
-pathOrg="./"
-pathDes="./"
+pathOrg="/data/site_public/"
+pathDes="./rmFiles/"
 
 """
 import numpy as np
@@ -30,5 +30,6 @@ for file in File4rm:
     if os.path.exists(pathOrg+file):
         #os.remove(pathOrg+file)
         os.rename(pathOrg+file, pathDes+file)
+        print("File dose exist")
     else:
         print("File dosen't exist")

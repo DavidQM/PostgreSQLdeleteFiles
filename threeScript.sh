@@ -1,13 +1,17 @@
 #!/bin/bash
 #
+User=app_convocatorias
+Passw=Convoc4*Med*
+DataB=convocatorias
+ipAddr=10.2.0.47
 
 # Se genera segunda consulta
 #Local
 #echo "threeScript"
-User=postgres
-Passw=sapp12345
-DataB=convocatorias
-ipAddr=192.168.1.14
+#User=postgres
+#Passw=sapp12345
+#DataB=convocatorias
+#ipAddr=192.168.1.14
 
 echo "Build file -> propuesta_requisito_id.txt"
 filename='propuesta_requisito_id.txt'
@@ -35,5 +39,5 @@ while read line; do
   fi
 done < $filename
 
-sleep 10
-sh ClearDB.sh $1
+#sleep 2
+#sh ClearDB.sh $1

@@ -2,11 +2,16 @@
 #!/bin/bash
 #
 
-#Local
-User=postgres
-Passw=sapp12345
+User=app_convocatorias
+Passw=Convoc4*Med*
 DataB=convocatorias
-ipAddr=192.168.1.14
+ipAddr=10.2.0.47
+
+#Local
+#User=postgres
+#Passw=sapp12345
+#DataB=convocatorias
+#ipAddr=192.168.1.14
 
 echo ''
 echo 'DataBase Cleanup'

@@ -1,13 +1,18 @@
 #!/bin/bash
 #
 
-# Se genera segunda consulta
+User=app_convocatorias
+Passw=Convoc4*Med*
+DataB=convocatorias
+ipAddr=10.2.0.47
+
+# Se genera primer consulta
 #Local
 #echo "SecondScript"
-User=postgres
-Passw=sapp12345
-DataB=convocatorias
-ipAddr=192.168.1.14
+#User=postgres
+#Passw=sapp12345
+#DataB=convocatorias
+#ipAddr=192.168.1.14
 
 echo "Build file -> estimulo_id.txt"
 filename='estimulo_id.txt'
