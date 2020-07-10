@@ -21,7 +21,7 @@ echo "MainScript"
 #ipAddr=192.168.1.14
 
 echo 'Build file -> convocatoria_id.txt'
-PGPASSWORD=$Passw psql -h $ipAddr -U $User -d $DataB -t -c "select id from sis_estimulos.concurso where agno='2020'" -o convocatoria_id.txt 
+PGPASSWORD=$Passw psql -h $ipAddr -U $User -d $DataB -t -c "select id from sis_estimulos.concurso where agno='2019'" -o convocatoria_id.txt 
 
 echo 'Build file -> estimulo_id.txt'
 filename='convocatoria_id.txt'
@@ -63,10 +63,6 @@ echo 'remove residual data'
 #eliminamos todos los files
 rm propuesta_id.txt
 rm estimulo_id.txt
-<<<<<<< HEAD
 rm convocatoria_id.txt
 
 
-=======
-rm convocatoria_id.txt
->>>>>>> b37a87da534ae19839ee16a2529f08ce7a94c603
