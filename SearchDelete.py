@@ -1,14 +1,9 @@
 import os
 
 # Path data
-<<<<<<< HEAD
 #pathOrg="./"
 pathOrg="/home/sapp/convocatorias/archivos_estimulos/"
-pathDes="./DeleteFiles/"
-=======
-pathOrg="/data/site_public/"
 pathDes="./rmFiles/"
->>>>>>> b37a87da534ae19839ee16a2529f08ce7a94c603
 
 """
 import numpy as np
