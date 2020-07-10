@@ -48,11 +48,6 @@ while read line; do
 done < $filename
 MULTILINE-COMMENT
 
-<<<<<<< HEAD
 sleep 3
-sh ClearDB.sh $1
-
-=======
-#sleep 2
 #sh ClearDB.sh $1
->>>>>>> b37a87da534ae19839ee16a2529f08ce7a94c603
+
