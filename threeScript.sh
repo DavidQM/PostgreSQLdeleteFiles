@@ -1,5 +1,12 @@
 #!/bin/bash
-#
+
+#Produccion
+#User=app_convoca
+#Passw=M3dconvoc4*
+#DataB=convocatorias
+#ipAddr=10.1.222.187
+
+#Desarrollo 
 User=app_convocatorias
 Passw=Convoc4*Med*
 DataB=convocatorias
